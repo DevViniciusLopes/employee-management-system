@@ -35,7 +35,16 @@ public class Employee {
 		this.cargo = cargo;
 	}
 	
+	public void aumentarSalario(double percent) {
+		salario = salario+(percent/100*salario);
+	}
 	
+	public String toString() {
+		
+		return +
+				
+	}
+		
 	
 	
 	}
