@@ -31,11 +31,14 @@ public class Program {
 		switch(select) {
 		case 1: 
 		
-		System.out.println("Insira os dados do funcionário a ser cadastrado:");
+		System.out.println("ID: ");
 		int id = sc.nextInt();
+		System.out.println("Nome: ");
 		sc.nextLine();
 		String name = sc.nextLine();
+		System.out.println("Salário: ");
 		double salario= sc.nextDouble();
+		System.out.println("Cargo: ");
 		sc.nextLine();
 		String cargo =sc.nextLine();
 		
@@ -44,6 +47,12 @@ public class Program {
 		break;
 		
 		case 2:
+			for(Employee e: list) { 
+				System.out.println(e); 
+			}
+		case 3:
+			
+		
 		}
 		
 			
