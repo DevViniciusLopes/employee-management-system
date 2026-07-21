@@ -49,10 +49,38 @@ public class Program {
 		case 2:
 			for(Employee e: list) { 
 				System.out.println(e); 
-			}
-		case 3:
+				}
+			break;
 			
-		
+		case 3:
+			System.out.println("Escreva o ID do funcionario a ser buscado: ");
+			int searchID = sc.nextInt();
+			boolean found = false;
+			Employee employeeFound = null;
+			for(Employee e : list) { 
+			
+			
+				
+			if(searchID == e.getId()){
+				found = true;
+				employeeFound = e;
+				break; 
+	
+			}
+			
+			
+			}
+			
+			if (found == true) {
+				
+				System.out.println(employeeFound);
+			}
+			
+			else {
+				System.out.println("ID invalido");
+			}
+			
+		break;
 		}
 		
 			
