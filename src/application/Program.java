@@ -29,7 +29,7 @@ public class Program {
 		select = sc.nextInt();
 		
 		switch(select) {
-		case 1: 
+		case 1: {
 		
 		System.out.println("ID: ");
 		int id = sc.nextInt();
@@ -45,14 +45,14 @@ public class Program {
 		Employee emp = new Employee(id,name,salario,cargo);
 		list.add(emp);
 		break;
-		
-		case 2:
+		}
+		case 2:{
 			for(Employee e: list) { 
 				System.out.println(e); 
 				}
 			break;
-			
-		case 3:
+		}
+		case 3:{
 			System.out.println("Escreva o ID do funcionario a ser buscado: ");
 			int searchID = sc.nextInt();
 			boolean found = false;
@@ -61,11 +61,10 @@ public class Program {
 			
 			
 				
-			if(searchID == e.getId()){
+			if(searchID == e.getId()) {
 				found = true;
 				employeeFound = e;
 				break; 
-	
 			}
 			
 			
@@ -82,13 +81,68 @@ public class Program {
 			
 		break;
 		}
+		case 4: {
+			System.out.println("Digite o ID do funcionário:");
+			int searchID = sc.nextInt();
+			boolean found = false;
+			Employee employeeFound = null;
+			
+			for(Employee e : list) { 
+				
+				
+				if(searchID == e.getId()) {
+					found = true;
+					employeeFound = e;
+					break; 
+				}
+			}
+				if (found) {
+					
+					System.out.println(employeeFound);
+					System.out.println("Escreva a porcentagem de aumento salarial:");
+					double percent = sc.nextDouble();
+					
+					employeeFound.aumentarSalario(percent);
+					System.out.println(employeeFound);
+					
+					
+					
+				}
+				
+				else {
+					System.out.println("ID invalido");
+				}
+			
+			
+			
+			break;
+			}
+		
+		case 5: {
+			
+			
+			
+			
+			
+			
+			
+			
+		break;	
+		}
+		
+		
+		
+		
+		}
 		
 			
 		
 			
+		
+			}
 		
 		}
 		
 	}
 
-}
+
