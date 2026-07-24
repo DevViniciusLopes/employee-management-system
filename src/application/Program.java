@@ -120,27 +120,60 @@ public class Program {
 		
 		case 5: {
 			
+			System.out.println("Digite o ID do funcionário:");
+			int searchID = sc.nextInt();
+			boolean found = false;
+			Employee employeeFound = null;
+			
+			for(Employee e : list) { 
+				
+				
+				if(searchID == e.getId()) {
+					found = true;
+					employeeFound = e;
+					break; 
+				}
+			}
+				if (found) {
+					
+					System.out.println(employeeFound);
+					list.remove(employeeFound);
+					System.out.println("Funcionário removido com sucesso:");
+					
+					
+				}
+				
+				else {
+					System.out.println("ID invalido.");
+				}
 			
 			
 			
 			
 			
 			
+				break;	
+				}
+		
+		case 0: {
+			System.out.println("Programa encerrado.");
 			
-		break;	
+			break;
 		}
 		
-		
-		
-		
+		default: {
+			System.out.println("Opção inválida.");
+			
 		}
 		
+			}	
+			
 			
 		
 			
 		
 			}
-		
+			sc.close();
 		}
 		
 	}
